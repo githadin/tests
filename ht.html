@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator | Calculate Your Monthly Payments</title>
+    <meta name="description" content="Use our free mortgage calculator to estimate your monthly mortgage payments. Input your loan amount, interest rate, loan term, property tax, home insurance, and PMI to get started.">
+    <meta name="keywords" content="mortgage calculator, home loan calculator, loan payment calculator, mortgage payment calculator, calculate mortgage payments">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Mortgage Calculator",
+            "description": "Use our free mortgage calculator to estimate your monthly mortgage payments. Input your loan amount, interest rate, loan term, property tax, home insurance, and PMI to get started.",
+            "url": "https://www.yourwebsite.com/mortgage-calculator",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.yourwebsite.com/mortgage-calculator?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Mortgage Calculator</h1>
+        <p>Use this calculator to determine your monthly mortgage payment, including taxes and insurance.</p>
+    </header>
+    <main>
+        <section class="calculator">
+            <form id="mortgage-form" aria-labelledby="form-heading">
+                <fieldset>
+                    <legend id="form-heading">Mortgage Calculation Form</legend>
+                    <div class="input-group">
+                        <label for="principal">Principal Amount:</label>
+                        <input type="number" id="principal" name="principal" required aria-required="true">
+                    </div>
+                    <div class="input-group">
+                        <label for="interest">Annual Interest Rate (%):</label>
+                        <input type="number" id="interest" name="interest" step="0.01" required aria-required="true">
+                    </div>
+                    <div class="input-group">
+                        <label for="years">Loan Term (years):</label>
+                        <input type="number" id="years" name="years" required aria-required="true">
+                    </div>
+                    <div class="input-group">
+                        <label for="property-tax">Annual Property Tax (% of loan amount):</label>
+                        <input type="number" id="property-tax" name="property-tax" step="0.01" required aria-required="true">
+                    </div>
+                    <div class="input-group">
+                        <label for="home-insurance">Annual Home Insurance ($):</label>
+                        <input type="number" id="home-insurance" name="home-insurance" required aria-required="true">
+                    </div>
+                    <div class="input-group">
+                        <label for="pmi">PMI (Private Mortgage Insurance, % of loan amount):</label>
+                        <input type="number" id="pmi" name="pmi" step="0.01" required aria-required="true">
+                    </div>
+                    <button type="button" onclick="calculateMortgage()">Calculate</button>
+                </fieldset>
+            </form>
+            <section class="result" id="result" aria-live="polite">
+                <h2>Monthly Payment: $<span id="monthly-payment">0.00</span></h2>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mortgage Calculator. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
